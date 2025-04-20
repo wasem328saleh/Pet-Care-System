@@ -1,4 +1,3 @@
-```markdown
 # Pet Care Management System (Backend API)
 
 A comprehensive Laravel-based backend system for managing animal adoptions, veterinary clinics, products, and training programs. Designed to streamline operations for veterinary professionals, pet owners, and animal trainers.
@@ -41,7 +40,7 @@ A comprehensive Laravel-based backend system for managing animal adoptions, vete
    DB_CONNECTION=mysql
    DB_HOST=127.0.0.1
    DB_PORT=3306
-   DB_DATABASE=pet_care
+   DB_DATABASE=pet_care_db
    DB_USERNAME=root
    DB_PASSWORD=
    
@@ -66,14 +65,12 @@ A comprehensive Laravel-based backend system for managing animal adoptions, vete
 | `api/Get_All_Clinics`             | GET    | List all clinics                | Public        |
 | `api/user/Get_Illness_By_Symptoms`| POST   | Symptom-based diagnosis         | User          |
 
-## 📄 License
-MIT License. See [LICENSE](LICENSE) for details.
-```
+## 🔧 Notes for Customization:
 
----
+1. **Replace Placeholders**:
+   - `your-username` → Your GitHub username.
+   - `your_jwt_secret_key` → Generate using `php artisan jwt:secret`.
+   - `your_youtube_api_key` → Obtain from [Google Cloud Console](https://console.cloud.google.com/).
 
-### Notes for Customization:
-1. Replace `your-username`, `your_jwt_secret_key`, and `your_youtube_api_key` with your actual values.
-2. Add frontend links (React/Flutter) if available.
-3. Extend the "API Endpoints" table with your full route list.
-4. Include screenshots or Postman collection links for clarity.
+2. **Frontend Integration**:
+   - Add links to your frontend apps (e.g., React: `https://github.com/...`, Flutter: `https://github.com/...`).
