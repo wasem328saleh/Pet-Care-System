@@ -1,66 +1,79 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+```markdown
+# Pet Care Management System (Backend API)
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+A comprehensive Laravel-based backend system for managing animal adoptions, veterinary clinics, products, and training programs. Designed to streamline operations for veterinary professionals, pet owners, and animal trainers.
 
-## About Laravel
+## 🚀 Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### **Admin Panel**
+- 🛠️ **CRUD Operations**: Manage animals (adoptions), clinics, vets, illnesses, products, and trainings.
+- ✅ **Order Management**: Approve/reject adoption, product, and training orders.
+- 👥 **User Management**: View/delete users and their activities.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### **User-Facing Features**
+- 🐾 **Animal Adoption**: Submit and track adoption requests.
+- 🛒 **Product Purchases**: Order pet supplies and view order history.
+- 🎓 **Training Programs**: Book and manage animal training sessions.
+- 🤒 **Symptom Checker**: Get potential illness diagnoses based on symptoms.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### **Technical Highlights**
+- 🔒 **JWT Authentication**: Secure role-based access (users/admins).
+- 📹 **YouTube Integration**: Validate animal-related videos via YouTube API.
+- 📊 **Dynamic Data**: APIs for clinics, doctors, illnesses, and adoptable animals.
 
-## Learning Laravel
+## 💻 Technologies
+- **Backend**: Laravel 9+ 
+- **Authentication**: JWT (JSON Web Tokens)
+- **Database**: MySQL/PostgreSQL
+- **Tools**: RESTful API, YouTube Data API
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🔧 Installation
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/pet-care-system.git
+   ```
+2. Install dependencies:
+   ```bash
+   composer install
+   ```
+3. Configure `.env` file:
+   ```env
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=pet_care
+   DB_USERNAME=root
+   DB_PASSWORD=
+   
+   JWT_SECRET=your_jwt_secret_key
+   YOUTUBE_API_KEY=your_youtube_api_key
+   ```
+4. Generate JWT secret:
+   ```bash
+   php artisan jwt:secret
+   ```
+5. Migrate & seed data:
+   ```bash
+   php artisan migrate --seed
+   ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 🌐 API Endpoints (Key Examples)
+| Endpoint                          | Method | Description                     | Auth Required |
+|-----------------------------------|--------|---------------------------------|---------------|
+| `api/login`                       | POST   | User/Admin login                | No            |
+| `api/admin/Store_Animal`          | POST   | Add new animal for adoption     | Admin         |
+| `api/user/Store_Animal_Adoption`  | POST   | Submit adoption request         | User          |
+| `api/Get_All_Clinics`             | GET    | List all clinics                | Public        |
+| `api/user/Get_Illness_By_Symptoms`| POST   | Symptom-based diagnosis         | User          |
 
-## Laravel Sponsors
+## 📄 License
+MIT License. See [LICENSE](LICENSE) for details.
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+---
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Pet-Care-System
-A platform for managing animal adoptions, veterinary clinics, and training programs. Features symptom-based illness diagnosis, JWT authentication for user/admin roles, YouTube integration, and dynamic content management. Built with Laravel (API) for clinics, pet stores, and trainers to streamline operations.
->>>>>>> ea59586ff0b0da3b37e6eee11ede1204732b1718
+### Notes for Customization:
+1. Replace `your-username`, `your_jwt_secret_key`, and `your_youtube_api_key` with your actual values.
+2. Add frontend links (React/Flutter) if available.
+3. Extend the "API Endpoints" table with your full route list.
+4. Include screenshots or Postman collection links for clarity.
